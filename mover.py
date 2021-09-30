@@ -3,6 +3,7 @@ import sys
 import shutil
 from origin import read_origin
 from destination import read_destination
+from tqdm import tqdm
 
 
 def move():
@@ -16,9 +17,10 @@ def move():
         print(f'Provided destination path "{dest}" does\'t exist!')
         sys.exit()
 
-    print(os.listdir(orig))
     files = os.listdir(orig)
-    for file in files:
+    pbar = tqdm(files)
+    for file in pbar:
+        pbar.set_description(f'Moving "{file}"')
         shutil.move(orig + file, dest + file)
 
-    print(os.listdir(orig))
+    print("Moving completed!")
