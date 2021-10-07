@@ -2,6 +2,7 @@ from consts import *
 from origin import set_origin, print_origin
 from destination import set_destination, print_destination
 from mover import move
+from configurate import analyze_origin
 
 command_table = {
     SET_ORIGIN_COMMAND: set_origin,
@@ -9,4 +10,5 @@ command_table = {
     READ_ORIGIN_COMMAND: print_origin,
     READ_DEST_COMMAND: print_destination,
     MOVE_COMMAND: move,
+    ANALYZE_ORIGIN: analyze_origin,
 }

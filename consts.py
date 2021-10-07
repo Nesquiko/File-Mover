@@ -7,3 +7,5 @@ SET_DEST_COMMAND = "--set_dest"
 READ_DEST_COMMAND = "--read_dest"
 
 MOVE_COMMAND = "--move"
+
+ANALYZE_ORIGIN = "--analyze"
